@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>占いの社</title>
-    <link rel="icon" href="./img/favicon.ico" />
-
-    <script type="module" crossorigin src="./assets/index-DiLbuKCt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Co4kqJJe.css">
+    <link rel="icon" href="./img/favicon.ico" />
+    <script type="module" crossorigin src="./assets/index-WNlHknQM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DYYKzxrV.css">
   </head>
   <body class="">
 <main>
   <section class="relative h-screen w-full overflow-hidden bg-linear-to-b/oklch from-blue-500 to-sky-200">
     
-    <div class="clickable-cloud absolute top-[10%] left-[5%] w-32 h-16 md:w-[220px] md:h-36 bg-white/70 rounded-full blur-xl cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa z-20"></div>
-    <div class="clickable-cloud absolute bottom-[15%] left-[8%] w-48 h-24 md:w-80 md:h-40  bg-white/80 rounded-full blur-lg cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa delay-300 z-20"></div>
-    <div class="absolute top-[10%] left-[40%] w-24 h-12 md:w-48 md:h-24 bg-white/60 rounded-[70%] blur-xl animate-fuwafuwa delay-500 z-0"></div>
+    <div class="clickable-cloud absolute top-[10%] left-[5%] w-32 h-16 md:w-80 md:h-60 bg-white/90 rounded-full blur-md shadow-lg cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa z-20"></div>
+    <div class="clickable-cloud absolute bottom-[15%] left-[8%] w-48 h-24 md:w-80 md:h-40  bg-white/95 rounded-full blur-sm shadow-2xl cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa delay-300 z-20"></div>
+    <div class="absolute top-[10%] left-[40%] w-24 h-12 md:w-48 md:h-24 bg-white/70 shadow-lg rounded-[70%] blur-xl animate-fuwafuwa delay-500 z-0"></div>
     
     <div class="flex h-full flex-col items-center justify-center relative z-10 px-4">
       <div class="mb-6 text-center animate-bounce">
@@ -32,15 +31,18 @@
     </div>
 
     <div class="absolute bottom-[10%] right-[30%] w-24 h-12 md:w-100 md:h-40 bg-white/70 rounded-[50%] blur-xl animate-fuwafuwa delay-500 z-0"></div>
-    <div class="clickable-cloud absolute top-[20%] right-[2%] w-40 h-20 md:w-80 md:h-36 bg-white/70 rounded-full blur-xl cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa delay-100 z-20"></div>
-    <div class="clickable-cloud absolute bottom-[10%] right-[5%] w-36 h-18 md:w-96 md:h-48 bg-white/80 rounded-full blur-lg cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa delay-75 z-20"></div>
+    <div class="clickable-cloud absolute top-[20%] right-[2%] w-40 h-20 md:w-80 md:h-36 bg-white/90 shadow-lg rounded-full blur-lg cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa delay-100 z-20"></div>
+    <div class="clickable-cloud absolute bottom-[10%] right-[5%] w-36 h-18 md:w-96 md:h-48 bg-white/95 shadow-lg rounded-full blur-lg cursor-pointer hover:scale-110 transition-transform duration-800 animate-fuwafuwa delay-75 z-20"></div>
     <div id="fortune-window" class="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm hidden">
     <div class="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border-4 border-sky-100 max-w-sm w-[90%] text-center relative animate-fuwafuwa">
-    
-    <button id="close-btn" class="absolute top-4 right-4 text-sky-400 hover:text-sky-600 font-bold text-2xl">&times;</button>
-
-    <h2 class="text-2xl font-bold text-sky-600 mb-4">今日の運勢</h2>
-    
+      
+      <button id="close-btn" class="absolute top-4 right-4 text-sky-400 hover:text-sky-600 font-bold text-2xl">&times;</button>
+      
+      <h2 class="text-2xl font-bold text-sky-600 mb-4">雲からアドバイス</h2>
+      
+      <p class="text-center pb-4 text-xl font-bold text-orange-500" id="res-advice">
+        "アドバイスがここに表示されます"
+      </p>
     <div class="space-y-4 text-left">
       <p class="flex justify-between border-b border-sky-50 pb-2">
         <span class="font-bold text-gray-500">ラッキーカラー</span>
@@ -50,10 +52,8 @@
         <span class="font-bold text-gray-500">ラッキーアイテム</span>
         <span id="res-item" class="text-sky-600 font-bold">---</span>
       </p>
-      <p class="text-center pt-4 italic text-gray-600" id="res-advice">
-        "アドバイスがここに表示されます"
-      </p>
     </div>
+    <p id="res-status" class="text-center text-sm text-gray-400 mt-4 font-bold"></p>
 
     <button id="close-btn-bottom" class="mt-8 bg-sky-400 text-white px-8 py-2 rounded-full font-bold hover:bg-sky-500 transition-colors">
       閉じる
@@ -67,7 +67,6 @@
     </main>
     <footer class="py-4 text-center text-xs">
       <small>&copy;</small>
-    </footer>
-
+    </footer>
   </body>
 </html>
